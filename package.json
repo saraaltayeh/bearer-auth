@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test jest --coverage --verbose",
+    "dev": "NODE_ENV=development nodemon index.js",
+    "start": "NODE_ENV=production node index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,27 @@
   "bugs": {
     "url": "https://github.com/saraaltayeh/bearer-auth/issues"
   },
-  "homepage": "https://github.com/saraaltayeh/bearer-auth#readme"
+  "homepage": "https://github.com/saraaltayeh/bearer-auth#readme",
+  "dependencies": {
+    "await": "^0.2.6",
+    "base-64": "^1.0.0",
+    "bcrypt": "^5.0.1",
+    "capabilities": "^0.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "drop": "^0.1.2",
+    "express": "^4.18.1",
+    "express-bearer-token": "^2.4.0",
+    "faker": "^5.5.3",
+    "inti": "^0.0.0",
+    "jest": "^28.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.1",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.0.8",
+    "supertest": "^6.2.3",
+    "sync": "^0.2.5"
+  }
 }
