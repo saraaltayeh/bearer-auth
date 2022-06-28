@@ -12,7 +12,6 @@ const DATABASE_CONFIG = process.env.NODE_ENV === 'production' ? {
             require: true,
             rejectUnauthorized: false,
         }
-
     }
 } : {};
 
