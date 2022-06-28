@@ -10,8 +10,13 @@ const errorHandler = require('./middleware/500');
 const notFound = require('./middleware/404');
 const basic = require('./auth/middleware/basic.js');
 const bearer = require('./auth/middleware/bearer.js');
-const users = require('./auth/models/users-model');
+const {users} = require('./auth/models/index');
 
+app.get("/", handleHomepage);
+
+function handleHomepage(req,res) {
+    res.status(200).send("welcome to home page");
+}
 
 app.post('/signup', async (req, res) => {
     try {
